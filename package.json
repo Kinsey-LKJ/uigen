@@ -9,6 +9,10 @@
     "start": "next start",
     "lint": "next lint",
     "test": "vitest",
+    "test:e2e": "playwright test",
+    "test:e2e:ui": "playwright test --ui",
+    "test:e2e:headed": "playwright test --headed",
+    "test:e2e:debug": "playwright test --debug",
     "setup": "npm install && npx prisma generate && npx prisma migrate dev",
     "db:reset": "npx prisma migrate reset --force"
   },

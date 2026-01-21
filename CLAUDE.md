@@ -17,11 +17,23 @@ npm run build
 # 代码检查
 npm run lint
 
-# 运行测试
+# 运行测试（单元测试）
 npm run test
 
 # 运行单个测试文件
 npx vitest run src/components/chat/__tests__/MessageList.test.tsx
+
+# 运行 E2E 测试（需先安装: npm install -D @playwright/test && npx playwright install）
+npm run test:e2e
+
+# 运行 E2E 测试（UI 模式）
+npm run test:e2e:ui
+
+# 运行 E2E 测试（显示浏览器）
+npm run test:e2e:headed
+
+# 调试 E2E 测试
+npm run test:e2e:debug
 
 # 重置数据库
 npm run db:reset
@@ -74,6 +86,11 @@ JWT (Jose) + HTTP-Only Cookie，7 天有效期。认证逻辑在 `src/lib/auth.t
 - @ai-sdk/anthropic (Claude)
 - Monaco Editor
 - Radix UI + shadcn/ui
+
+## 测试
+
+- **单元测试**: Vitest + React Testing Library
+- **E2E 测试**: Playwright（测试文件位于 `e2e/` 目录）
 
 ## 环境变量
 
